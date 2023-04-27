@@ -45,3 +45,5 @@ button.click()
 search.click()
 time.sleep(300)  # time the browser is opened. Have to mention explicitly due to automatic closing
 driver.quit()  # close chrome
+
+#test_for_branch
