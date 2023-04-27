@@ -20,16 +20,28 @@ username_field = driver.find_element(by=By.XPATH, value="//input[@id='session_ke
 password_field = driver.find_element(by=By.XPATH, value="//input[@id='session_password']")
 # navigate and enter username
 username_field.click()
-username_field.send_keys("rahulrajendran1098@gmail.com")
+username_field.send_keys("kumarkyle287@gmail.com")
 
 # navigate and enter password
 password_field.click()
-password_field.send_keys("password")
+password_field.send_keys("goodlord123")
 
 # navigate to and click submit
 submit_button = driver.find_element(by=By.XPATH,
                                     value="//*[@id='main-content']/section[1]/div/div/form[1]/div[2]/button")
 submit_button.click()
 
-time.sleep(30)  # time the browser is opened. Have to mention explicitly due to automatic closing
+
+# search=driver.find_element(by=By.XPATH, value="//input[@aria-label='search']")
+search=driver.find_element(by=By.CLASS_NAME, value="search-global-typeahead__input")
+search.send_keys("Wendy's")
+search.send_keys(Keys.ENTER)
+
+button_text = "Companies"
+button = driver.find_element(By.XPATH, f"//button[text()='{button_text}']")
+button.click()
+
+
+search.click()
+time.sleep(300)  # time the browser is opened. Have to mention explicitly due to automatic closing
 driver.quit()  # close chrome
